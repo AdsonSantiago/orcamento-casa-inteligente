@@ -1,6 +1,6 @@
 /* Estilos para o corpo da página */
 body {
-    background-color: #e1cee1;
+    background-color: #efe5ef;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
@@ -8,20 +8,22 @@ body {
 
 /* Estilos para cabeçalhos (h1, h2, etc.) */
 h1 {
-    
     background-image: linear-gradient(to right, #cf40a9, #6d1f73);
     color: white; /* torna o texto dentro do h1 transparente para mostrar o gradiente por trás */
-    
 }
 
 h2 {
     color: #555454;
 }
 
+h3 {
+    text-align: left;
+    color: #555454;
+    font-weight: bold;
+}
+
 p {
     color: #555454;
-    text-align: left;
-
 }
 
 /* Estilos para botões */
@@ -44,7 +46,7 @@ img.produto-image {
     width: 100px;
     height: 100px;
     transition: transform 0.2s;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 .div1, .div2 {
@@ -54,16 +56,24 @@ img.produto-image {
     padding: 10px;
     border: 1px solid white;
     border-radius: 10px;
-
 }
-
 
 /* Estilos para os contêineres de produtos */
 .produto-container {
+    width: auto;
+    height: 110;
     color: #555454;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+}
+
+.texto-input {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 100px;
+
 }
 
 .produto-image {
@@ -84,20 +94,73 @@ img.produto-image {
     margin-left: 20px; /* Espaçamento entre a imagem e o texto */
 }
 
-.small-input {
-    border-radius: 10px;
+.number-input {
+
+    border-radius: 5px;
     width: 22px;
 }
 
 .logo {
     position: fixed;
-	bottom: 0;
-	right: 0;
-	width: 100px;
+    bottom: 0;
+    right: 0;
+    width: 100px;
 }
 
-.opc-1 {
-    font-weight: bold;
+.pesquisa {
+    text-align: right;
     color: #555454;
+    font-weight: bold;
+}
 
+#pesquisa {
+    border-radius: 5px;
+}
+
+
+.opc-1 {
+    text-align: left;
+    font-weight: bold;
+}
+
+.opc-2 {
+    color: #555454;
+    font-weight: bold;
+}
+
+.opc-3 {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555454;
+    text-align: left;
+    font-weight: bold;
+}
+
+.observation-input {
+    border-radius: 5px;
+    width: 300px; /* Largura desejada */
+    height: 30px; /* Altura desejada */
+}
+
+.hidden-product {
+    display: none;
+}
+
+#topButton {
+    display: none; /* Oculta o botão inicialmente */
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 40px; /* Define a distância do botão a partir do fundo */
+    right: 20px; /* Define a distância do botão a partir da direita */
+    padding: 10px 20px;
+    background-color: #5e387b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999; /* Certifica-se de que o botão apareça acima de outros elementos */
+}
+
+#topButton:hover {
+    background-color: #c73086;
 }
