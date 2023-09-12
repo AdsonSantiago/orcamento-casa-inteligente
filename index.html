@@ -1,1097 +1,2058 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css">
     <title>Selecione Produtos</title>
-  </head>
-  <body>
-    <h1>Selecione Produtos Casa Inteligente</h1>
-    <br />
+</head>
+
+<body>
+    <a id="top"></a>
+    <h1>Selecione Produtos</h1>
+    <br>
+
+
+    <h3>Solicitante</h3>
+
+    <div class="opc-3">
+        <label class="opc-3" for="nomeSolicitante">Nome:</label>
+        <input type="text" id="nomeSolicitante" name="solicitante-nome" placeholder="Ex: Fenômeno Gaucho">
+
+        <label class="opc-3" for="telSolicitante">Tel:</label>
+        <input type="tel" id="telSolicitante" name="solicitante-tel" placeholder="Ex: 11912341234">
+
+        <label class="opc-3" for="emailSolicitante">Email:</label>
+        <input type="email" id="emailSolicitante" name="solicitante-email" placeholder="Ex: fenomeno.1234@empresa.com">
+    </div>
+    <br>
+
+    <h3>Cliente</h3>
+
+    <div class="opc-3">
+        <label class="opc-3" for="nomeCliente">Nome:</label>
+        <input type="text" id="nomeCliente" name="cliente-nome" placeholder="Ex: Fenômeno Gaucho">
+
+        <label class="opc-3" for="telCliente">Tel:</label>
+        <input type="tel" id="telCliente" name="cliente-tel" placeholder="Ex: 11912341234">
+
+        <label class="opc-3" for="emailCliente">Email:</label>
+        <input type="email" id="emailCliente" name="cliente-email" placeholder="Ex: fenomeno.1234@empresa.com">
+    </div>
+    <br>
+    <br>
+
+    
+    
     <!-- Adicione mais produtos conforme necessário -->
-
-
-
+    
     <form id="productForm">
-      <label class="opc-2" for="pesquisa">Pesquisar Produtos:</label>
-      <input
-        type="text"
-        id="pesquisa"
-        name="pesquisa"
-        placeholder="Digite seu produto aqui"
-        oninput="filterProducts()"
-      />
+        
+        <div class="pesquisa">
+            <label class="opc-2" for="pesquisa">Pesquisar:</label>
+            <input type="search" id="pesquisa" name="pesquisa" placeholder="Digite sua pesquisa aqui" oninput="filterProducts()"
+            >
+            <span class="lupa-icon"></span>
+        </div>
+        <br>
 
-      <p class="opc-1">Opções de Assistente Virtual:</p>
+        <p class="opc-1">Opções de Assistente Virtual:</p>
 
-      <div class="produto-container">
-          <img
-          src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Echo%20Show%208.png?v=1692993793822"
-          alt="Produto Orçamento 1"
-          class="produto-image"
-          />
-          <input
-          type="number"
-          id="product1"
-            name="products"
-            min="0"
-            value="Echo Show 8 2a Geração - R$999.00"
-            class="number-input"/>
-        <label class="texto-input" for="product1">
-          <span class="produto-text">Echo Show 8 2a Geração - R$999.00</span>
-          <input
-            type="text"
-            id="observation1"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
+        <section>
+            <div class="produto-container">
+                <img src="./static/img/Echo Show 8.png" alt="Produto Orçamento 1" class="produto-image">
+                <input type="number" id="product1" name="products" min="0" value="Echo Show 8 2a Geração - R$999.00" class="number-input">
+                <label for="observation1">
+                    <span class="produto-text">Echo Show 8 2a Geração - R$999.00</span>
+                    <input
+                    type="text"
+                    id="observation1"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>        
+            </div>
+        
+            <div class="produto-container">
+                <img src="./static/img/Echo Dot 5 com Relogio branc.png" alt="Produto Orçamento 2" class="produto-image">
+                <input type="number" id="product2" name="products" min="0" value="Echo Dot 5 com Relógio Branca - R$529.00" class="number-input">
+                <label for="observation2">
+                    <span class="produto-text">Echo Dot 5 com Relógio Branca - R$529.00</span>
+                    <input
+                    type="text"
+                    id="observation2"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
 
-      <div class="produto-container">
-          <img
-          src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Echo%20Dot%205%20com%20Relogio%20branc.png?v=1692993785524"
-          alt="Produto Orçamento 2"
-          class="produto-image"
-          />
-          <input
-          type="number"
-          id="product2"
-          name="products"
-          min="0"
-          value="Echo Dot 5 com Relógio Branca - R$529.00"
-          class="number-input"
-          />
-        <label class="texto-input" for="product2">
-          <span class="produto-text"
-            >Echo Dot 5 com Relógio Branca - R$529.00</span>
-          <input
-            type="text"
-            id="observation2"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
+            <div class="produto-container">
+                <img src="./static/img/Echo dot quinta geração branca.png" alt="Produto Orçamento 3" class="produto-image">
+                <input type="number" id="product3" name="products" min="0" value="Echo Dot 5° Geração Branca - R$429.00" class="number-input">
+                <label for="observation3">
+                    <span class="produto-text">Echo Dot 5° Geração Branca - R$429.00</span>
+                    <input
+                    type="text"
+                    id="observation3"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
 
-      <div class="produto-container">
-          <img
-          src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Echo%20dot%20quinta%20gera%C3%A7%C3%A3o%20branca.png?v=1692994129517"
-          alt="Produto Orçamento 3"
-          class="produto-image"
-          />
-          <input
-          type="number"
-          id="product3"
-          name="products"
-          min="0"
-          value="Echo Dot 5° Geração Branca - R$429.00"
-          class="number-input">
-        <label class="texto-input" for="product3">
-          <span class="produto-text"
-            >Echo Dot 5° Geração Branca - R$429.00</span>
-          <input
-            type="text"
-            id="observation3"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
+            <div class="produto-container">
+                <img
+                src="./static/img/Echo-Dot-Preta.png"
+                alt="Produto Orçamento 4"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product4"
+                name="products"
+                min="0"
+                value="Echo Dot 5° Geração Preto - R$429.00"
+                class="number-input"
+                />
+                <label for="observation4">
+                    <span class="produto-text"
+                    >Echo Dot 5° Geração Preto - R$429.00</span>
+                    <input
+                    type="text"
+                    id="observation4"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
 
-      <div class="produto-container">
-          <img
-          src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Echo-Dot-Preta.png?v=1693146202805"
-          alt="Produto Orçamento 4"
-          class="produto-image"
-          />
-          <input
-          type="number"
-          id="product4"
-          name="products"
-          min="0"
-          value="Echo Dot 5° Geração Preto - R$429.00"
-          class="number-input"
-          />
-        <label class="texto-input" for="product4">
-          <span class="produto-text">Echo Dot 5° Geração Preto - R$429.00</span>
-          <input
-            type="text"
-            id="observation4"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
+            <div class="produto-container">
+                <img
+                src="./static/img/Echo-pop-branca.png"
+                alt="Produto Orçamento 5"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product5"
+                name="products"
+                min="0"
+                value="Amazon Echo Pop branca - R$349.00"
+                class="number-input"
+                />
+                <label for="observation5">
+                    <span class="produto-text"
+                    >Amazon Echo Pop branca - R$349.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation5"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+        
+            <div class="produto-container">
+                <img
+                src="./static/img/Echo-pop-Preta.png"
+                alt="Produto Orçamento 6"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product6"
+                name="products"
+                min="0"
+                value="Amazon Echo Pop preta - R$349.00"
+                class="number-input"
+                />
+                <label for="observation6">
+                    <span class="produto-text"
+                    >Amazon Echo Pop preta - R$349.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation6"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+                
+            <div class="produto-container">
+                <img
+                src="./static/img/Echo-show-10.png"
+                alt="Produto Orçamento 7"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product7"
+                name="products"
+                min="0"
+                value="Amazon Echo show 10 - R$1999.00"
+                class="number-input"
+                />
+                <label for="observation7">
+                    <span class="produto-text"
+                    >Amazon Echo show 10 - R$1999.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation7"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
 
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Echo-show-10.png?v=1693146288580"
-        alt="Produto Orçamento 5"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product5"
-        name="products"
-        min="0"
-        value="Amazon Echo show 10 - R$1999.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product5">
-            <span class="produto-text">Amazon Echo show 10 - R$1999.00</span>
-            <input
-                type="text"
-                id="observation5"
-                name="observations"
-                placeholder="Acrescente uma observação"
-                class="observation-input"
-            />
-        </label>
-      </div>
+            <div class="produto-container">
+                <img
+                src="./static/img/echo-studio.png"
+                alt="Produto Orçamento 8"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product8"
+                name="products"
+                min="0"
+                value="Amazon Echo Studio - R$1799.00"
+                class="number-input"
+                />
+                <label for="observation8">
+                    <span class="produto-text"
+                    >Amazon Echo Studio - R$1799.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation8"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
 
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/echo-show-5.png?v=1693146266109"
-        alt="Produto Orçamento 6"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product6"
-        name="products"
-        min="0"
-        value="Amazon Echo Show 5 2a Geracao - R$559.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product6">
-          <span class="produto-text"
-            >Amazon Echo Show 5 2a Geracao - R$559.00</span
-          >
-          <input
-            type="text"
-            id="observation6"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/echo-studio.png?v=1693146341183"
-        alt="Produto Orçamento 7"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product7"
-        name="products"
-        min="0"
-        value="Amazon Echo Studio - R$1.799.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product7">
-          <span class="produto-text">Amazon Echo Studio - R$1.799.00</span>
-          <input
-            type="text"
-            id="observation7"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Nest-mini.jpg?v=1693146326493"
-        alt="Produto Orçamento 8"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product8"
-        name="products"
-        min="0"
-        value="Google Nest mini 2 - R$339.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product8">
-          <span class="produto-text">Google Nest mini 2 - R$339.00</span>
-                    
-          <input
-            type="text"
-            id="observation8"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-      <br>
-
-      <p class="opc-1">Opções de Áudio e Vídeo:</p>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Harman%20Kardon%20Onyx%20Studio%208.png?v=1693501226620"
-        alt="Produto Orçamento 9"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product9"
-        name="products"
-        min="0"
-        value="Harman Kardon Onyx Studio 8 - R$ 1499.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product9">
-          <span class="produto-text"
-            >Harman Kardon Onyx Studio 8 - R$ 1499.00</span>
-          
-          <input
-            type="text"
-            id="observation9"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Jbl%20Soundbar%205.0%20Multibean.png?v=1693501462796"
-        alt="Produto Orçamento 10"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product10"
-        name="products"
-        min="0"
-        value="Jbl Soundbar 5.0 Multibean - R$ 2999.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product10">
-          <span class="produto-text"
-            >Jbl Soundbar 5.0 Multibean - R$ 2999.00</span
-          >
-          
-          <input
-            type="text"
-            id="observation10"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Echo%20dot%20quinta%20gera%C3%A7%C3%A3o%20branca.png?v=1692994129517"
-        alt="Produto Orçamento 11"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product11"
-        name="products"
-        min="0"
-        value="Sansung Projetor The Freestyle - R$ 2799.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product11">
-          <span class="produto-text"
-            >Sansung Projetor The Freestyle - R$ 2799.00</span
-          >
-          
-          <input
-            type="text"
-            id="observation11"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Echo%20dot%20quinta%20gera%C3%A7%C3%A3o%20branca.png?v=1692994129517"
-        alt="Produto Orçamento 12"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product12"
-        name="products"
-        min="0"
-        value="Sansung Soundbar Hw-q800b com 5.1.2 Canais - R$ 2499.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product12">
-          <span class="produto-text"
-            >Sansung Soundbar Hw-q800b com 5.1.2 Canais - R$ 2499.00</span
-          >
-          
-          <input
-            type="text"
-            id="observation12"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Echo%20dot%20quinta%20gera%C3%A7%C3%A3o%20branca.png?v=1692994129517"
-        alt="Produto Orçamento 13"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product13"
-        name="products"
-        min="0"
-        value="Sonos Caixa de Som One - R$ 2599.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product13">
-          <span class="produto-text">Sonos Caixa de Som One - R$ 2599.00</span>
-          <input
-            type="text"
-            id="observation13"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 14"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product14"
-        name="products"
-        min="0"
-        value="Sonos Soundbar Ar - R$ 11999.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product14">
-          <span class="produto-text">Sonos Soundbar Ar - R$ 11999.00</span>
-          
-          <input
-            type="text"
-            id="observation14"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-      <br />
-
-      <p class="opc-1">Opções de Conforto:</p>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 15"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product15"
-        name="products"
-        min="0"
-        value="Geonav Alimentador Pet Inteligente - R$ 499.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product15">
-          <span class="produto-text"
-            >Geonav Alimentador Pet Inteligente - R$ 499.00</span
-          >
-          
-          <input
-            type="text"
-            id="observation15"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 16"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product16"
-        name="products"
-        min="0"
-        value="Geonav Carregador de Parede Usb 3.4a - R$ 69.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product16">
-          <span class="produto-text"
-            >Geonav Carregador de Parede Usb 3.4a - R$ 69.00</span
-          >
-          
-          <input
-            type="text"
-            id="observation16"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 17"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product17"
-        name="products"
-        min="0"
-        value="Geonav Controle Remoto Universal Infravermelho - R$ 119.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product17">
-          <span class="produto-text"
-            >Geonav Controle Remoto Universal Infravermelho - R$ 119.00</span
-          >
-          <input
-            type="text"
-            id="observation17"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 18"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product18"
-        name="products"
-        min="0"
-        value="Intelbras Acionador De Cortinas Iac110 - R$ 179.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product18">
-          <span class="produto-text"
-            >Intelbras Acionador De Cortinas Iac110 - R$ 179.00</span
-          >
-          <input
-            type="text"
-            id="observation18
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 19"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product19"
-        name="products"
-        min="0"
-        value="Intelbras Detector de Fumaça Smart ldf 620 - R$ 219.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product19">
-          <span class="produto-text"
-            >Intelbras Detector de Fumaça Smart ldf 620 - R$ 219.00</span
-          >
-          <input
-            type="text"
-            id="observation19"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 20"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product20"
-        name="products"
-        min="0"
-        value="Interbras Detector de Gás Smart ldg 620 - R$ 219.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product20">
-          <span class="produto-text"
-            >Interbras Detector de Gás Smart ldg 620 - R$ 219.00</span
-          >
-          <input
-            type="text"
-            id="observation20"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 21"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product21"
-        name="products"
-        min="0"
-        value="Intelbras Detector de Monoxido de Carbono ldm 620 - R$ 399.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product21">
-          <span class="produto-text"
-            >Intelbras Detector de Monoxido de Carbono ldm 620 - R$ 399.00</span
-          >
-          <input
-            type="text"
-            id="observation21"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 22"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product22"
-        name="products"
-        min="0"
-        value="Intelbras Sensor de Movimento lsm 1001 - R$ 179.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product22">
-          <span class="produto-text"
-            >Intelbras Sensor de Movimento lsm 1001 - R$ 179.00</span
-          >
-          <input
-            type="text"
-            id="observation22"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 23"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product23"
-        name="products"
-        min="0"
-        value="Positivo Kit Casa Conectada - R$ 209.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product23">
-          <span class="produto-text"
-            >Positivo Kit Casa Conectada - R$ 209.00</span
-          >
-          <input
-            type="text"
-            id="observation23"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 24"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product24"
-        name="products"
-        min="0"
-        value="Positivo Robo Aspirador Wi-Fi Laser - R$ 2599.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product24">
-          <span class="produto-text"
-            >Positivo Robo Aspirador Wi-Fi Laser - R$ 2599.00</span
-          >
-          <input
-            type="text"
-            id="observation24"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 25"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product25"
-        name="products"
-        min="0"
-        value="Positivo Smart Robo Aspirador Wi-Fi - R$ 959.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product25">
-          <span class="produto-text"
-            >Positivo Smart Robo Aspirador Wi-Fi - R$ 959.00</span
-          >
-          <input
-            type="text"
-            id="observation25"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 26"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product26"
-        name="products"
-        min="0"
-        value="Steck Controle Uni Infraver Smdcups1 - R$ 129.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product26">
-          <span class="produto-text"
-            >Steck Controle Uni Infraver Smdcups1 - R$ 129.00</span
-          >
-          <input
-            type="text"
-            id="observation26"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 27"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product27"
-        name="products"
-        min="0"
-        value="Steck Tomada 2p+1 10a 250v Smct1us1 Br - R$ 99.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product27">
-          <span class="produto-text"
-            >Steck Tomada 2p+1 10a 250v Smct1us1 Br - R$ 99.00</span
-          >
-          <input
-            type="text"
-            id="observation27"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-      <br />
-
-      <p class="opc-1">Opções de Equipamentos:</p>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Tp-link%20Access%20Point%20Eap225.png?v=1693099120319"
-        alt="Produto Orçamento 28"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product28"
-        name="products"
-        min="0"
-        value="Tp-link Access Point Eap225 - R$699.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product28">
-          <span class="produto-text"
-            >Tp-link Access Point Eap225 - R$699.00</span
-          >
-          <input
-            type="text"
-            id="observation28"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Tp-link%20Access%20Point%20Eap245.png?v=1693099177975"
-        alt="Produto Orçamento 29"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product29"
-        name="products"
-        min="0"
-        value="Tp-link Access Point Eap245 - R$899.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product29">
-          <span class="produto-text"
-            >Tp-link Access Point Eap245 - R$899.00</span
-          >
-          <input
-            type="text"
-            id="observation29"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Tp-link%20Controlador%20Cloud%20Oc200.png?v=1693099234659"
-        alt="Produto Orçamento 30"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product30"
-        name="products"
-        min="0"
-        value="Tp-link controlador cloud Oc200 - R$859.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product30">
-          <span class="produto-text"
-            >Tp-link controlador cloud Oc200 - R$859.00</span
-          >
-          <input
-            type="text"
-            id="observation30"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Tp-link%20DECO%20M5%20(3%20Unidades).jpg?v=1693099276139"
-        alt="Produto Orçamento 31"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product31"
-        name="products"
-        min="0"
-        value="Tp-link DECO M5 (3 Unidades) - R$1449.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product31">
-          <span class="produto-text"
-            >Tp-link DECO M5 (3 Unidades) - R$1449.00</span
-          >
-          <input
-            type="text"
-            id="observation31"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Tp-link%20Kit%20Deco%20X20%20(2%20unidades).png?v=1693099324842"
-        alt="Produto Orçamento 32"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product32"
-        name="products"
-        min="0"
-        value="Tp-link KIT Deco X20 (2 Unidades) - R$1199.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product32">
-          <span class="produto-text"
-            >Tp-link KIT Deco X20 (2 Unidades) - R$1199.00
-          </span>
-          <input
-            type="text"
-            id="observation32"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/tp-link%20Roteador%20Omada%20Vpn%20%20Er605.png?v=1693099383157"
-        alt="Produto Orçamento 33"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product33"
-        name="products"
-        min="0"
-        value="Tp-link Roteador Omada Vpn Er605 - R$599.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product33">
-          <span class="produto-text"
-            >Tp-link Roteador Omada Vpn Er605 - R$599.00</span
-          >
-          <input
-            type="text"
-            id="observation33"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/alexa1.png?v=1692975176413"
-        alt="Produto Orçamento 34"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product34"
-        name="products"
-        min="0"
-        value="Vivo Repetidor Smart Wi-Fi - R$349.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product34">
-          <span class="produto-text"
-            >Vivo Repetidor Smart Wi-Fi - R$349.00</span
-          >
-          <input
-            type="text"
-            id="observation34"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Tp-link%20Switch%20poe%208p%20-%20Tlsg2210mp.png?v=1693099492814"
-        alt="Produto Orçamento 35"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product35"
-        name="products"
-        min="0"
-        value="Tp-link Switch Poe 8p-Tlsg2210mp - R$1499.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product35">
-          <span class="produto-text"
-            >Tp-link Switch Poe 8p-Tlsg2210mp - R$1499.00</span
-          >
-          <input
-            type="text"
-            id="observation35"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-      <br />
-
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Tp-link%20switch%20Poe%208p%20-%20Tls2210pp.png?v=1693099439317"
-        alt="Produto Orçamento 36"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product36"
-        name="products"
-        min="0"
-        value="Tp-link Switch Poe 8p-Tlsg2210p - R$999.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="product36">
-          <span class="produto-text"
-            >Tp-link Switch Poe 8p-Tlsg2210p - R$999.00</span
-          >
-          <input
-            type="text"
-            id="observation36"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-      <br />
-
-      <div class="produto-container">
-          <img src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Cabeamento%20%2B%20Configura%C3%A7%C3%A3o%20de%20Repetidor.jpg?v=1693099059129" alt="Produto Orçamento 38" class="produto-image" />
-          <input type="number" id="product38" name="products" min="0" value="Cabeamento + Configuração de Repetidor - R$180.00" class="number-input" />
-          <label class="texto-input" for="observation38">
-              <span class="produto-text">Cabeamento + Configuração de Repetidor - R$180.00</span>
-              <input type="text" id="observation38" name="observations" placeholder="Acrescente uma observação" class="observation-input" />
-          </label>
-      </div>
-                                     
-      <div class="produto-container">
-        <img
-        src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/Tp-link%20Switch%20Tlsg108e%208p.png?v=1693100006604"
-        alt="Produto Orçamento 37"
-        class="produto-image"
-        />
-        <input
-        type="number"
-        id="product37"
-        name="products"
-        min="0"
-        value="Tp-link Switch Tllsg108e 8p - R$309.00"
-        class="number-input"
-        />
-        <label class="texto-input" for="observation37">
-          <span class="produto-text"
-            >Tp-link Switch Tllsg108e 8p - R$309.00</span
-          >
-          <input
-            type="text"
-            id="observation37"
-            name="observations"
-            placeholder="Acrescente uma observação"
-            class="observation-input"
-          />
-        </label>
-      </div>
-      <br>
+            <div class="produto-container">
+                <img
+                src="./static/img/Nest-mini.jpg"
+                alt="Produto Orçamento 9"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product9"
+                name="products"
+                min="0"
+                value="Google Nest Mini - R$339.00"
+                class="number-input"
+                />
+                <label for="observation9">
+                    <span class="produto-text"
+                    >Google Nest Mini - R$339.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation9"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+        </section>
+        <br>
 
 
 
-      <br>
-      <br>
-                                     
+        <p class="opc-1">Opções de Áudio e Vídeo</p>
+        
+        
+        <section>
+            <div class="produto-container">
+                <img
+                src="./static/img/Harman Kardon Onyx Studio 8.png"
+                alt="Produto Orçamento 10"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product10"
+                name="products"
+                min="0"
+                value="Harman Kardon Onyx Studio 8 - R$1499.00"
+                class="number-input"
+                />
+                <label for="observation10">
+                    <span class="produto-text"
+                    >Harman Kardon Onyx Studio 8 - R$1499.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation10"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
 
-      <button type="button" id="generateButton">Gerar Resumo</button>
-      <button type="button" id="otherButton">Gerar no PDF</button>
+            <div class="produto-container">
+                <img
+                src="./static/img/Jbl Soundbar 5.0 Multibean.png"
+                alt="Produto Orçamento 11"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product11"
+                name="products"
+                min="0"
+                value="Jbl Soundbar 5.0 Multibean - R$2999.00"
+                class="number-input"
+                />
+                <label for="observation11">
+                    <span class="produto-text"
+                    >Jbl Soundbar 5.0 Multibean - R$2999.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation11"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Sansung Projetor The Freestyle.png"
+                alt="Produto Orçamento 12"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product12"
+                name="products"
+                min="0"
+                value="Sansung Projetor The Freestyle - R$2799.00"
+                class="number-input"
+                />
+                <label for="observation12">
+                    <span class="produto-text"
+                    >Sansung Projetor The Freestyle - R$2799.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation12"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Sansung Soundbar Hw-q800b.png"
+                alt="Produto Orçamento 13"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product13"
+                name="products"
+                min="0"
+                value="Sansung Soundbar Hw-q800b com 5.1.2 Canais - R$2499.00"
+                class="number-input"
+                />
+                <label for="observation13">
+                    <span class="produto-text"
+                    >Sansung Soundbar Hw-q800b com 5.1.2 Canais - R$2499.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation13"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Sonos Caixa de Som One.png"
+                alt="Produto Orçamento 14"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product14"
+                name="products"
+                min="0"
+                value="Sonos Caixa de Som One - R$2599.00"
+                class="number-input"
+                />
+                <label for="observation14">
+                    <span class="produto-text"
+                    >Sonos Caixa de Som One - R$2599.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation14"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Sonos Soundbar Ar.png"
+                alt="Produto Orçamento 15"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product15"
+                name="products"
+                min="0"
+                value="Sonos Soundbar Ar - R$11999.00"
+                class="number-input"
+                />
+                <label for="observation15">
+                    <span class="produto-text"
+                    >Sonos Soundbar Ar - R$11999.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation15"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+        </section>
+        <br>
+
+
+
+        <p class="opc-1">Opções de Conforto</p>
+
+
+
+        <section>
+            <div class="produto-container">
+                <img
+                src="./static/img/Geonav Alimentador Pet Inteligente.png"
+                alt="Produto Orçamento 16"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product16"
+                name="products"
+                min="0"
+                value="Geonav Alimentador Pet Inteligente - R$499.00"
+                class="number-input"
+                />
+                <label for="observation16">
+                    <span class="produto-text"
+                    >Geonav Alimentador Pet Inteligente - R$499.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation16"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Geonav Carregador de Parede.png"
+                alt="Produto Orçamento 17"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product17"
+                name="products"
+                min="0"
+                value="Geonav Carregador de Parede Usb 3.4a - R$69.00"
+                class="number-input"
+                />
+                <label for="observation17">
+                    <span class="produto-text"
+                    >Geonav Carregador de Parede Usb 3.4a - R$69.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation17"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Geonav Controle Remoto Universal Infravermelho.png"
+                alt="Produto Orçamento 18"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product18"
+                name="products"
+                min="0"
+                value="Geonav Controle Remoto Universal Infravermelho - R$119.00"
+                class="number-input"
+                />
+                <label for="observation18">
+                    <span class="produto-text"
+                    >Geonav Controle Remoto Universal Infravermelho - R$119.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation18"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Intelbras Acionador De Cortinas Iac110.png"
+                alt="Produto Orçamento 19"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product18"
+                name="products"
+                min="0"
+                value="Intelbras Acionador De Cortinas Iac110 - R$179.00"
+                class="number-input"
+                />
+                <label for="observation19">
+                    <span class="produto-text"
+                    >Intelbras Acionador De Cortinas Iac110 - R$179.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation19"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Intelbras Detector de Fumaça Smart ldf 620.png"
+                alt="Produto Orçamento 20"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product20"
+                name="products"
+                min="0"
+                value="Intelbras Detector de Fumaça Smart ldf 620 - R$219.00"
+                class="number-input"
+                />
+                <label for="observation20">
+                    <span class="produto-text"
+                    >Intelbras Detector de Fumaça Smart ldf 620 - R$219.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation20"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Interbras Detector de Gás Smart ldg 620.png"
+                alt="Produto Orçamento 21"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product21"
+                name="products"
+                min="0"
+                value="Interbras Detector de Gás Smart ldg 620 - R$219.00"
+                class="number-input"
+                />
+                <label for="observation21">
+                    <span class="produto-text"
+                    >Interbras Detector de Gás Smart ldg 620 - R$219.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation21"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Intelbras Detector de Monoxido de Carbono ldm 620.png"
+                alt="Produto Orçamento 22"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product22"
+                name="products"
+                min="0"
+                value="Intelbras Detector de Monoxido de Carbono ldm 620 - R$399.00"
+                class="number-input"
+                />
+                <label for="observation22">
+                    <span class="produto-text"
+                    >Intelbras Detector de Monoxido de Carbono ldm 620 - R$399.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation22"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Intelbras Sensor de Movimento lsm 1001.png"
+                alt="Produto Orçamento 23"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product23"
+                name="products"
+                min="0"
+                value="Intelbras Sensor de Movimento lsm 1001 - R$179.00"
+                class="number-input"
+                />
+                <label for="observation23">
+                    <span class="produto-text"
+                    >Intelbras Sensor de Movimento lsm 1001 - R$179.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation23"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Positivo Kit Casa Conectada.png"
+                alt="Produto Orçamento 24"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product24"
+                name="products"
+                min="0"
+                value="Positivo Kit Casa Conectada - R$209.00"
+                class="number-input"
+                />
+                <label for="observation24">
+                    <span class="produto-text"
+                    >Positivo Kit Casa Conectada - R$209.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation24"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Positivo Robo Aspirador Wi-Fi Laser.png"
+                alt="Produto Orçamento 25"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product25"
+                name="products"
+                min="0"
+                value="Positivo Robo Aspirador Wi-Fi Laser - R$2599.00"
+                class="number-input"
+                />
+                <label for="observation25">
+                    <span class="produto-text"
+                    >Positivo Robo Aspirador Wi-Fi Laser - R$2599.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation25"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Positivo Smart Robo Aspirador Wi-Fi.png"
+                alt="Produto Orçamento 26"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product26"
+                name="products"
+                min="0"
+                value="Positivo Smart Robo Aspirador Wi-Fi - R$959.00"
+                class="number-input"
+                />
+                <label for="observation26">
+                    <span class="produto-text"
+                    >Positivo Smart Robo Aspirador Wi-Fi - R$959.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation26"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Steck Controle Uni Infraver Smdcups1.png"
+                alt="Produto Orçamento 27"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product27"
+                name="products"
+                min="0"
+                value="Steck Controle Uni Infraver Smdcups1 - R$129.00"
+                class="number-input"
+                />
+                <label for="observation27">
+                    <span class="produto-text"
+                    >Steck Controle Uni Infraver Smdcups1 - R$129.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation27"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Steck Tomada 2p+1 10a 250v Smct1us1 Br.png"
+                alt="Produto Orçamento 28"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product28"
+                name="products"
+                min="0"
+                value="Steck Tomada 2p+1 10a 250v Smct1us1 Br - R$99.00"
+                class="number-input"
+                />
+                <label for="observation28">
+                    <span class="produto-text"
+                    >Steck Tomada 2p+1 10a 250v Smct1us1 Br - R$99.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation28"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+        </section>
+        <br>
+
+
+        <p class="opc-1">Opções de Conforto</p>
+
+
+        <section>
+            <div class="produto-container">
+                <img
+                src="./static/img/Amazon Fire TV Stick.jpg"
+                alt="Produto Orçamento 29"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product29"
+                name="products"
+                min="0"
+                value="Amazon Fire TV Stick - R$299.00"
+                class="number-input"
+                />
+                <label for="observation29">
+                    <span class="produto-text"
+                    >Amazon Fire TV Stick - R$299.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation29"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Google Chromecast 3.jpg"
+                alt="Produto Orçamento 30"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product30"
+                name="products"
+                min="0"
+                value="Google Chromecast 3 - R$339.00"
+                class="number-input"
+                />
+                <label for="observation30">
+                    <span class="produto-text"
+                    >Google Chromecast 3 - R$339.00</span>
+                    <input
+                    type="text"
+                    id="observation30"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+        </section>
+        <br>
+
+
+
+        <p class="opc-1">Opções de Equipamentos</p>
+
+
+        <section>
+            <div class="produto-container">
+                <img
+                src="./static/img/Intelbras Central de Automação Smart lca 1001.png"
+                alt="Produto Orçamento 31"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product31"
+                name="products"
+                min="0"
+                value="Intelbras Central de Automação Smart lca 1001 - R$309.00"
+                class="number-input"
+                />
+                <label for="observation31">
+                    <span class="produto-text"
+                    >Intelbras Central de Automação Smart lca 1001 - R$309.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation31"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+        </section>
+        <br>
+
+
+        <p class="opc-1">Opções de Iluminação</p>
+
+
+        <section>
+            <div class="produto-container">
+                <img
+                src="./static/img/Geonav Adaptador de Tomada Wi-Fi.png"
+                alt="Produto Orçamento 32"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product32"
+                name="products"
+                min="0"
+                value="Geonav Adaptador de Tomada Wi-Fi - R$109.00"
+                class="number-input"
+                />
+                <label for="observation32">
+                    <span class="produto-text"
+                    >Geonav Adaptador de Tomada Wi-Fi - R$109.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation32"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Geonav Central de Automação Zigbee.png"
+                alt="Produto Orçamento 33"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product33"
+                name="products"
+                min="0"
+                value="Geonav Central de Automação Zigbee - R$299.00"
+                class="number-input"
+                />
+                <label for="observation33">
+                    <span class="produto-text"
+                    >Geonav Central de Automação Zigbee - R$299.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation33"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Geonav Fita de Led Wi-Fi.png"
+                alt="Produto Orçamento 39"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product39"
+                name="products"
+                min="0"
+                value="Geonav Fita de Led Wi-Fi - R$269.00"
+                class="number-input"
+                />
+                <label for="observation39">
+                    <span class="produto-text"
+                    >Geonav Fita de Led Wi-Fi - R$269.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation39"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Geonav Interruptor Zigbee 1 Botão.png"
+                alt="Produto Orçamento 40"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product40"
+                name="products"
+                min="0"
+                value="Geonav Interruptor Zigbee 1 Botão - R$169.00"
+                class="number-input"
+                />
+                <label for="observation40">
+                    <span class="produto-text"
+                    >Geonav Interruptor Zigbee 1 Botão - R$169.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation40"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Geonav Interruptor Zigbee 2 Botão.png"
+                alt="Produto Orçamento 41"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product41"
+                name="products"
+                min="0"
+                value="Geonav Interruptor Zigbee 2 Botão - R$179.00"
+                class="number-input"
+                />
+                <label for="observation41">
+                    <span class="produto-text"
+                    >Geonav Interruptor Zigbee 2 Botão - R$179.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation41"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Geonav Interruptor Zigbee 3 Botão.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Geonav Interruptor Zigbee 3 Botão - R$189.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Geonav Interruptor Zigbee 3 Botão - R$189.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Geonav Lâmpada LED Wi-Fi.png"
+                alt="Produto Orçamento 43"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product43"
+                name="products"
+                min="0"
+                value="Geonav Lâmpada LED Wi-Fi - R$69.00"
+                class="number-input"
+                />
+                <label for="observation43">
+                    <span class="produto-text"
+                    >Geonav Lâmpada LED Wi-Fi - R$69.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation43"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Intelbras Interruptor 3 Botões EWS 1003.png"
+                alt="Produto Orçamento 44"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product44"
+                name="products"
+                min="0"
+                value="Intelbras Interruptor 3 Botões EWS 1003 - R$69.00"
+                class="number-input"
+                />
+                <label for="observation44">
+                    <span class="produto-text"
+                    >Intelbras Interruptor 3 Botões EWS 1003 - R$69.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation44"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Intelbras Lampada Spot Ews 440.png"
+                alt="Produto Orçamento 45"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product45"
+                name="products"
+                min="0"
+                value="Intelbras Lampada Spot Ews 440 - R$89.00"
+                class="number-input"
+                />
+                <label for="observation45">
+                    <span class="produto-text"
+                    >Intelbras Lampada Spot Ews 440 - R$89.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation45"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Intelbras Protetor Eletronico Smart.png"
+                alt="Produto Orçamento 46"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product46"
+                name="products"
+                min="0"
+                value="Intelbras Protetor Eletronico Smart - R$149.00"
+                class="number-input"
+                />
+                <label for="observation46">
+                    <span class="produto-text"
+                    >Intelbras Protetor Eletronico Smart - R$149.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation46"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Positivo Luminaria De Mesa Wi-fi.png"
+                alt="Produto Orçamento 47"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product47"
+                name="products"
+                min="0"
+                value="Positivo Luminaria De Mesa Wi-fi - R$219.00"
+                class="number-input"
+                />
+                <label for="observation47">
+                    <span class="produto-text"
+                    >Positivo Luminaria De Mesa Wi-fi - R$219.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation47"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Positivo Smart Lampada Wi-fi.png"
+                alt="Produto Orçamento 48"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product49"
+                name="products"
+                min="0"
+                value="Positivo Smart Lampada Wi-fi - R$59.00"
+                class="number-input"
+                />
+                <label for="observation49">
+                    <span class="produto-text"
+                    >Positivo Smart Lampada Wi-fi - R$59.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation49"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Steck Interruptor 1 Modulo Smci1bs1 4x2.png"
+                alt="Produto Orçamento 50"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product50"
+                name="products"
+                min="0"
+                value="Steck Interruptor 1 Modulo Smci1bs1 4x2 - R$209.00"
+                class="number-input"
+                />
+                <label for="observation50">
+                    <span class="produto-text"
+                    >Steck Interruptor 1 Modulo Smci1bs1 4x2 - R$209.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation50"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Steck Interruptor 2 Modulo Smci2bs1 4x2.png"
+                alt="Produto Orçamento 51"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product51"
+                name="products"
+                min="0"
+                value="Steck Interruptor 2 Modulo Smci2bs1 4x2 - R$199.00"
+                class="number-input"
+                />
+                <label for="observation51">
+                    <span class="produto-text"
+                    >Steck Interruptor 2 Modulo Smci2bs1 4x2 - R$199.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation51"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Steck Interruptor 3 Modulo Smci3bs1 4x2.png"
+                alt="Produto Orçamento 52"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product52"
+                name="products"
+                min="0"
+                value="Steck Interruptor 3 Modulo Smci3bs1 4x2 - R$279.00"
+                class="number-input"
+                />
+                <label for="observation52">
+                    <span class="produto-text"
+                    >Steck Interruptor 3 Modulo Smci3bs1 4x2 - R$279.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation52"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Steck Interruptor 4 Modulo Smci4bs1 4x2.png"
+                alt="Produto Orçamento 53"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product53"
+                name="products"
+                min="0"
+                value="Steck Interruptor 4 Modulo Smci4bs1 4x2 - R$259.00"
+                class="number-input"
+                />
+                <label for="observation53">
+                    <span class="produto-text"
+                    >Steck Interruptor 4 Modulo Smci4bs1 4x2 - R$259.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation53"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Steck Interruptor 4 Modulo Smci4bs2 4x4.png"
+                alt="Produto Orçamento 54"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product54"
+                name="products"
+                min="0"
+                value="Steck Interruptor 4 Modulo Smci4bs2 4x4 - R$259.00"
+                class="number-input"
+                />
+                <label for="observation54">
+                    <span class="produto-text"
+                    >Steck Interruptor 4 Modulo Smci4bs2 4x4 - R$259.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation54"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Steck Interruptor 6 Modulo Smci4bs1 4x4.png"
+                alt="Produto Orçamento 55"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product55"
+                name="products"
+                min="0"
+                value="Steck Interruptor 6 Modulo Smci4bs1 4x4 - R$299.00"
+                class="number-input"
+                />
+                <label for="observation55">
+                    <span class="produto-text"
+                    >Steck Interruptor 6 Modulo Smci4bs1 4x4 - R$299.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation55"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Steck Interruptor Dimmer Smcd1bs1 Br.png"
+                alt="Produto Orçamento 56"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product56"
+                name="products"
+                min="0"
+                value="Steck Interruptor Dimmer Smcd1bs1 Br - R$369.00"
+                class="number-input"
+                />
+                <label for="observation56">
+                    <span class="produto-text"
+                    >Steck Interruptor Dimmer Smcd1bs1 Br - R$369.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation56"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+        </section>
+        <br>
+
+
+
+        <p class="opc-1">Opções de PC</p>
+
+
+
+        <section>
+            <div class="produto-container">
+                <img
+                src="./static/img/Lenovo Notebook Ideapad 3i Core I3 4gb 256gb.png"
+                alt="Produto Orçamento 57"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product57"
+                name="products"
+                min="0"
+                value="Lenovo Notebook Ideapad 3i Core I3 4gb 256gb - R$2599.00"
+                class="number-input"
+                />
+                <label for="observation57">
+                    <span class="produto-text"
+                    >Lenovo Notebook Ideapad 3i Core I3 4gb 256gb - R$2599.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation57"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Lenovo Notebook Ideapad 3i Core I5 8gb 256gb.png"
+                alt="Produto Orçamento 58"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product58"
+                name="products"
+                min="0"
+                value="Lenovo Notebook Ideapad 3i Core I5 8gb 256gb - R$3099.00"
+                class="number-input"
+                />
+                <label for="observation58">
+                    <span class="produto-text"
+                    >Lenovo Notebook Ideapad 3i Core I5 8gb 256gb - R$3099.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation58"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Lenovo Notebook Ideapad 3i Core I7 12gb 256gb.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Lenovo Notebook Ideapad 3i Core I7 12gb 256gb - R$4449.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Lenovo Notebook Ideapad 3i Core I7 12gb 256gb - R$4449.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Lenovo Notebook Ideapad Gaming 3i Core I5 8gb 512gb.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Lenovo Notebook Ideapad Gaming 3i Core I5 8gb 512gb - R$4299.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Lenovo Notebook Ideapad Gaming 3i Core I5 8gb 512gb - R$4299.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Lenovo Notebook Ideapad I3 Celeron 4gb 128gb.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Lenovo Notebook Ideapad I3 Celeron 4gb 128gb - R$2099.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Lenovo Notebook Ideapad I3 Celeron 4gb 128gb - R$2099.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Positivo Notebook 2 Em 1 Duo Intel Celeron Dual-core.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Positivo Notebook 2 Em 1 Duo Intel Celeron Dual-core - R$1699.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Positivo Notebook 2 Em 1 Duo Intel Celeron Dual-core - R$1699.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Samsung Galaxy Book2 I3 8gb 256gb.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Samsung Galaxy Book2 I3 8gb 256gb - R$3199.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Samsung Galaxy Book2 I3 8gb 256gb - R$3199.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Samsung Galaxy Tab A7 Lite 4g 32gb T225 - R$1299.00.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Samsung Galaxy Tab A7 Lite 4g 32gb T225 - R$1299.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Samsung Galaxy Tab A7 Lite 4g 32gb T225 - R$1299.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Samsung Galaxy Tab A8 10.5 X205.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Samsung Galaxy Tab A8 10.5 X205 - R$1599.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Samsung Galaxy Tab A8 10.5 X205 - R$1599.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Samsung Galaxy Tab S8 11 X706.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Samsung Galaxy Tab S8 11 X706 - R$5299.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Samsung Galaxy Tab S8 11 X706 - R$5299.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+        </section>
+        <br>
+
+
+
+        <p class="opc-1">Opções de Segurança</p>
+
+
+        <section>
+            <div class="produto-container">
+                <img
+                src="./static/img/Geonav Camera Wi-fi Smart.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Geonav Camera Wi-fi Smart - R$269.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Geonav Camera Wi-fi Smart - R$269.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Geonav Camera Wi-fi Smart C/ Bateria.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Geonav Camera Wi-fi Smart C/ Bateria - R$699.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Geonav Camera Wi-fi Smart C/ Bateria - R$699.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Intelbras Camera Wifi Smart Izc 1003.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Intelbras Camera Wifi Smart Izc 1003 -R$299.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Intelbras Camera Wifi Smart Izc 1003 -R$299.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Intelbras Fechadura De Sobrepor Ifr1001.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Intelbras Fechadura De Sobrepor Ifr1001 - R$599.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Intelbras Fechadura De Sobrepor Ifr1001 - R$599.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Positivo Camera Bot Smart 360º.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Positivo Camera Bot Smart 360º - R$279.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Positivo Camera Bot Smart 360º - R$279.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Steck Camera Externa Smbc2bs1 Br.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Steck Camera Externa Smbc2bs1 Br - R$449.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Steck Camera Externa Smbc2bs1 Br - R$449.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Tp-link Camera Externa Tapo C310.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Tp-link Camera Externa Tapo C310 - R$369.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Tp-link Camera Externa Tapo C310 - R$369.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Tp-link Camera Fixa Tapo C100.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Tp-link Camera Fixa Tapo C100 - R$239.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Tp-link Camera Fixa Tapo C100 - R$239.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Tp-link Tapo C200 Ccamera Wifi Panorama 360.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Tp-link Tapo C200 Ccamera Wifi Panorama 360 - R$299.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Tp-link Tapo C200 Ccamera Wifi Panorama 360 - R$299.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+
+            <div class="produto-container">
+                <img
+                src="./static/img/Samsung Galaxy Tab S8 11 X706.png"
+                alt="Produto Orçamento 42"
+                class="produto-image"
+                />
+                <input
+                type="number"
+                id="product42"
+                name="products"
+                min="0"
+                value="Samsung Galaxy Tab S8 11 X706 - R$5299.00"
+                class="number-input"
+                />
+                <label for="observation42">
+                    <span class="produto-text"
+                    >Samsung Galaxy Tab S8 11 X706 - R$5299.00</span
+                    >
+                    <input
+                    type="text"
+                    id="observation42"
+                    name="observations"
+                    placeholder="Acrescente uma observação"
+                    class="observation-input"
+                    />
+                </label>
+            </div>
+        </section>
+
+        <br>
+        <br>
+        
+        <button type="button" id="generateButton">Gerar Resumo</button>
+        <button type="button" id="otherButton">Gerar no PDF</button>
+
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
 
-    <div id="result" style="display: none">
-      <h2>Resumo do Orçamento:</h2>
-      <ul id="selectedProducts"></ul>
-      <p>Total: R$ <span id="totalPrice">0.00</span></p>
+    <div id="result" style="display: none;">
+        <h2>Resumo do Orçamento:</h2>
+        <ul id="selectedProducts"></ul>
+        <p>Total: R$ <span id="totalPrice">0.00</span></p>
     </div>
     <script src="./static/javas/script.js"></script>
-    <img
-      class="logo"
-      src="https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/vivo-120.png?v=1692977465269"
-      alt="logo"
-    />
-  </body>
+    
+    <a href="#top" id="topButton">&#x25B2;</a>
+
+    <img class="logo" src="./static/img/vivo-120.png" alt="logo">
+</body>
 </html>
