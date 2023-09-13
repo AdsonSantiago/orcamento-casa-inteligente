@@ -68,6 +68,17 @@ img.produto-image {
     align-items: center;
 }
 
+.container {
+    display: flex;
+    justify-content: start;
+    
+  }
+
+.me {
+    margin-right: 100px;
+
+}
+
 .texto-input {
     display: flex;
     align-items: center;
