@@ -8,7 +8,7 @@ body {
 
 /* Estilos para cabeçalhos (h1, h2, etc.) */
 h1 {
-    background-image: linear-gradient(to right, #cf40a9, #6d1f73);
+    background-image: linear-gradient(to right, #cf40a9, #694288);
     color: white; /* torna o texto dentro do h1 transparente para mostrar o gradiente por trás */
 }
 
@@ -28,8 +28,8 @@ p {
 
 /* Estilos para botões */
 button {
-    padding: 10px 20px;
-    background-color: #5e387b;
+    padding: 7px 10px;
+    background-color: #694288;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -49,13 +49,15 @@ img.produto-image {
     border-radius: 15px;
 }
 
-.div1, .div2 {
-    background-color: #b3a5b6;
-    width: 500px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 10px;
+.container {
+    display: flex;
+    justify-content: start;
+    
+  }
+
+.me {
+    margin-right: 100px;
+
 }
 
 /* Estilos para os contêineres de produtos */
@@ -66,17 +68,6 @@ img.produto-image {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-}
-
-.container {
-    display: flex;
-    justify-content: start;
-    
-  }
-
-.me {
-    margin-right: 100px;
-
 }
 
 .texto-input {
@@ -98,6 +89,7 @@ img.produto-image {
 .produto-text {
     align-items: normal;
     margin-left: 20px; /* Espaçamento entre a imagem e o texto */
+    margin-right: 20px;
 }
 
 .produto-preco {
@@ -151,7 +143,7 @@ img.produto-image {
 .observation-input {
     border-radius: 5px;
     width: 300px; /* Largura desejada */
-    height: 30px; /* Altura desejada */
+    height: 20px; /* Altura desejada */
 }
 
 .hidden-product {
@@ -162,9 +154,9 @@ img.produto-image {
     display: none; /* Oculta o botão inicialmente */
     position: fixed; /* Fixa o botão na tela */
     bottom: 40px; /* Define a distância do botão a partir do fundo */
-    right: 20px; /* Define a distância do botão a partir da direita */
-    padding: 10px 20px;
-    background-color: #5e387b;
+    right: 30px; /* Define a distância do botão a partir da direita */
+    padding: 5px 20px;
+    background-color: #694288;
     color: white;
     border: none;
     border-radius: 5px;
@@ -174,4 +166,32 @@ img.produto-image {
 
 #topButton:hover {
     background-color: #c73086;
+}
+
+/* Estilize a tabela */
+.mini-tabela {
+    position: fixed; /* Fixa a tabela */
+    top: 27%; /* Ajusta a posição verticalmente para o centro da página */
+    right: 20px; /* Define uma distância da margem direita */
+    transform: translate(0, -50%); /* Centraliza verticalmente */
+    border-collapse: collapse;
+}
+
+ 
+/* Estilize as células da tabela */
+.mini-tabela th, .mini-tabela td {
+    position: relative;
+    border: 1px solid #694288;
+    padding: 8px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+ 
+  /* Estilize o botão */
+#mostrarEsconderBotao {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    z-index: 2; /* Garante que o botão fique acima da tabela */
 }
