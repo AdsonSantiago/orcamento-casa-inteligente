@@ -1,3 +1,4 @@
+
 // Função para calcular o preço total
 function calculateTotal() {
     var checkboxes = document.querySelectorAll('input[name="products"]:checked');
@@ -22,7 +23,7 @@ function calculateTotal() {
 
 // Função para gerar a página de orçamento
 function generateBudget() {
-    const selectedProducts = document.querySelectorAll('input[name="products"]');
+    const selectedProducts = document.querySelectorAll('input[id^="product"]');
     const observations = document.querySelectorAll('input[name="observations"]'); // Seleciona todos os campos de observação
 
     const result = document.getElementById('result');
@@ -71,7 +72,9 @@ function generateBudget() {
     // Mostra a página de resultados
     result.style.display = 'block';
 
-    return { produtosSelecionados: produtosSelecionadosArray, totalPrice: totalPrice.toFixed(2) };
+    return { 
+        produtosSelecionados: produtosSelecionadosArray,
+         totalPrice: totalPrice.toFixed(2) };
 }
 
 
@@ -204,3 +207,5 @@ document.getElementById("topButton").onclick = function() {
     document.body.scrollTop = 0; // Para navegadores mais antigos
     document.documentElement.scrollTop = 0; // Para navegadores modernos
 };
+
+
