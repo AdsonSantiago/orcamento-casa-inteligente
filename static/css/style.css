@@ -1,6 +1,6 @@
 /* Estilos para o corpo da página */
 body {
-    background-color: #efe5ef;
+    background-color: #cdc9cb;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
@@ -170,21 +170,24 @@ img.produto-image {
 
 /* Estilize a tabela */
 .mini-tabela {
+    background-color: #694288;
+    color: white;
     position: fixed; /* Fixa a tabela */
     top: 27%; /* Ajusta a posição verticalmente para o centro da página */
     right: 20px; /* Define uma distância da margem direita */
     transform: translate(0, -50%); /* Centraliza verticalmente */
     border-collapse: collapse;
+    border-radius: 10%;
 }
 
  
 /* Estilize as células da tabela */
 .mini-tabela th, .mini-tabela td {
     position: relative;
-    border: 1px solid #694288;
+    border: 1px solid white;
     padding: 8px;
     text-align: left;
-    border-radius: 5px;
+    border-radius: 10%;
 }
 
  
