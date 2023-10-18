@@ -104,7 +104,7 @@ function gerarPDF(produtosSelecionados, totalPrice) {
     
     logo.src = 'https://cdn.glitch.global/6734fcaa-1157-4b47-9cdf-898c918a353e/vivo-120.png?v=1692977465269';
 
-    doc.addImage(logo, 'PNG', 170, 270, 30, 20);
+    doc.addImage(logo, 'PNG', 170, 275, 30, 14);
 
     doc.text('ORÇAMENTO CASA INTELIGENTE', 105, 15, null, null, 'center');
 
@@ -114,26 +114,22 @@ function gerarPDF(produtosSelecionados, totalPrice) {
 
     doc.setFontStyle('bold');
     doc.text('Solicitante', 10, 35);
-    doc.text('Cliente', 100, 35);
+    //doc.text('Cliente', 100, 35);
     doc.setFontStyle('normal');
 
     doc.text('Nome: ' + nomeSolicitante, 10, 45);
     doc.text('Telefone: ' + telefoneSolicitante, 10, 50);
     doc.text('Email: ' + emailSolicitante, 10, 55);
     
-    // Adicione campos Cliente
-    doc.text('Nome: ' + nomeCliente, 100, 45);
-    doc.text('Telefone: ' + telefoneCliente, 100, 50);
-    doc.text('Email: ' + emailCliente, 100, 55);
-
+    
     // Inicialize uma string para a lista de produtos
     var produtosText = '';
-
+    
     produtosSelecionados.forEach((produto, index) => {
         // Adicione cada produto ao PDF
         produtosText += `${index + 1}. ${produto.name} / Qntd: ${produto.quantity}\n Obs: ${produto.observation}\n \n`;
     });
-
+    
     // Defina a coordenada vertical (y) para a lista de produtos
     var yPos = 80;
     doc.setFont('helvetica');
@@ -141,26 +137,33 @@ function gerarPDF(produtosSelecionados, totalPrice) {
     doc.setFontStyle('bold');
     doc.text('Produtos - Preços:', 10, yPos);
     doc.setFontStyle('normal');
-
+    
     // Adicione a lista de produtos ao PDF
     doc.text(produtosText, 10, yPos + 10, { fontSize: 8 });
     yPos += 10;
-
+    
     doc.setFontStyle('bold');
     doc.setFontSize(14);
-
-    doc.text(`Preço Total: R$ ${totalPrice}`, 10, yPos + 167);
+    
+    doc.text(`Valor total: R$ ${totalPrice}`, 10, yPos + 138);
     doc.setFontStyle('normal')
-
-
+    
     doc.setLineWidth(0.5);
     doc.setDrawColor(128, 0, 128);
-    doc.line(10, 265, 200, 265);
+    doc.line(10, 230, 200, 230);
+    
+    doc.setLineWidth(0.5);
+    doc.setDrawColor(0, 0, 0);
+    doc.line(10, 258, 90, 258);
 
+    // Adicione campos Cliente
+    doc.text('Nome: ' + nomeCliente, 10, 265);
+    doc.text('Email: ' + emailCliente, 10, 270);
+    
     var base64String = doc.output('datauristring');
     window.open(base64String, '_blank');
     doc.save('teste.pdf');
-
+    
 };
 
 
@@ -168,7 +171,7 @@ function gerarPDF(produtosSelecionados, totalPrice) {
 const otherButton = document.getElementById('otherButton');
 otherButton.addEventListener('click', function () {
     const { produtosSelecionados, totalPrice } = generateBudget();
-
+    
     // Chame a função gerarPDF com os produtosSelecionados e o totalPrice
     gerarPDF(produtosSelecionados, totalPrice);
 });
