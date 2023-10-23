@@ -1,4 +1,3 @@
-
 // Função para calcular o preço total
 function calculateTotal() {
     var checkboxes = document.querySelectorAll('input[name="products"]:checked');
@@ -93,12 +92,12 @@ function gerarPDF(produtosSelecionados, totalPrice) {
     
     // Obtenha os elementos de entrada para Solicitante
     var nomeSolicitante = document.getElementById('nomeSolicitante').value;
-    var telefoneSolicitante = document.getElementById('telSolicitante').value;
+    //var telefoneSolicitante = document.getElementById('telSolicitante').value;
     var emailSolicitante = document.getElementById('emailSolicitante').value;
     
     // Obtenha os elementos de entrada para Cliente
     var nomeCliente = document.getElementById('nomeCliente').value;
-    var telefoneCliente = document.getElementById('telCliente').value;
+    //var telefoneCliente = document.getElementById('telCliente').value;
     var emailCliente = document.getElementById('emailCliente').value;
     
     
@@ -118,8 +117,8 @@ function gerarPDF(produtosSelecionados, totalPrice) {
     doc.setFontStyle('normal');
 
     doc.text('Nome: ' + nomeSolicitante, 10, 45);
-    doc.text('Telefone: ' + telefoneSolicitante, 10, 50);
-    doc.text('Email: ' + emailSolicitante, 10, 55);
+    //doc.text('Telefone: ' + telefoneSolicitante, 10, 50);
+    doc.text('Email: ' + emailSolicitante, 10, 52);
     
     
     // Inicialize uma string para a lista de produtos
@@ -167,6 +166,29 @@ function gerarPDF(produtosSelecionados, totalPrice) {
 };
 
 
+function duplicarSecao() {
+    event.preventDefault();
+    // Selecione a seção original que deseja duplicar
+    const secaoOriginal = document.getElementById('ambiente-duplicado');
+  
+    if (secaoOriginal) {
+        // Remova a classe "escondida" para exibir a seção duplicada
+        secaoOriginal.classList.remove('escondida');
+    } else {
+        console.log("Seção original não encontrada.");
+    }
+  
+    var novoAmbienteInput = document.createElement('input');
+    novoAmbienteInput.type = 'text';
+    novoAmbienteInput.id = 'ambiente-novo';
+    novoAmbienteInput.placeholder = 'Nome do Ambiente Novo';
+    
+    var containerNovoAmbiente = document.getElementById('ambiente-duplicado');
+    containerNovoAmbiente.appendChild(novoAmbienteInput);
+  }
+
+
+
 // Adicione um ouvinte de eventos ao botão "otherButton"
 const otherButton = document.getElementById('otherButton');
 otherButton.addEventListener('click', function () {
@@ -210,5 +232,7 @@ document.getElementById("topButton").onclick = function() {
     document.body.scrollTop = 0; // Para navegadores mais antigos
     document.documentElement.scrollTop = 0; // Para navegadores modernos
 };
+  
+
 
 
