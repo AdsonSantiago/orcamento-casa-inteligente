@@ -1,4 +1,5 @@
 /* Estilos para o corpo da página */
+
 body {
     background-color: #cdc9cb;
     font-family: Arial, sans-serif;
@@ -6,15 +7,18 @@ body {
     margin: 20px;
 }
 
+
 /* Estilos para cabeçalhos (h1, h2, etc.) */
 h1 {
     background-image: linear-gradient(to right, #cf40a9, #694288);
     color: white; /* torna o texto dentro do h1 transparente para mostrar o gradiente por trás */
 }
 
+
 h2 {
     color: #555454;
 }
+
 
 h3 {
     text-align: left;
@@ -22,9 +26,11 @@ h3 {
     font-weight: bold;
 }
 
+
 p {
     color: #555454;
 }
+
 
 /* Estilos para botões */
 button {
@@ -36,10 +42,12 @@ button {
     border-radius: 10px;
 }
 
+
 button:hover {
     border-radius: 10px;
     background-color: #c73086;
 }
+
 
 /* Estilos para imagens de produtos */
 img.produto-image {
@@ -49,16 +57,21 @@ img.produto-image {
     border-radius: 15px;
 }
 
+
 .container {
     display: flex;
     justify-content: start;
-    
+
   }
+
+ 
 
 .me {
     margin-right: 100px;
 
 }
+
+ 
 
 /* Estilos para os contêineres de produtos */
 .produto-container {
@@ -70,11 +83,13 @@ img.produto-image {
     align-items: center;
 }
 
+
 .texto-input {
     display: flex;
     align-items: center;
     width: 400px;
     height: 100px;
+ 
 
 }
 
@@ -86,22 +101,28 @@ img.produto-image {
     float: left; /* Define a imagem como elemento flutuante à esquerda */
 }
 
+ 
+
 .produto-text {
     align-items: normal;
     margin-left: 20px; /* Espaçamento entre a imagem e o texto */
     margin-right: 20px;
 }
 
+
 .produto-preco {
     color: rgb(9, 172, 47);
     margin-left: 20px; /* Espaçamento entre a imagem e o texto */
 }
 
-.number-input {
 
+
+.number-input {
     border-radius: 5px;
     width: 22px;
 }
+
+
 
 .logo {
     position: fixed;
@@ -110,26 +131,36 @@ img.produto-image {
     width: 100px;
 }
 
+
+
 .pesquisa {
     text-align: right;
     color: #555454;
     font-weight: bold;
 }
 
+
+
 #pesquisa {
     border-radius: 5px;
 }
 
+
+ 
 
 .opc-1 {
     text-align: left;
     font-weight: bold;
 }
 
+
+
 .opc-2 {
     color: #555454;
     font-weight: bold;
 }
+
+
 
 .opc-3 {
     display: block;
@@ -140,15 +171,19 @@ img.produto-image {
     font-weight: bold;
 }
 
+
+
 .observation-input {
     border-radius: 5px;
     width: 300px; /* Largura desejada */
     height: 20px; /* Altura desejada */
 }
 
+
 .hidden-product {
     display: none;
 }
+
 
 #topButton {
     display: none; /* Oculta o botão inicialmente */
@@ -162,11 +197,15 @@ img.produto-image {
     border-radius: 5px;
     cursor: pointer;
     z-index: 999; /* Certifica-se de que o botão apareça acima de outros elementos */
+
 }
+
+ 
 
 #topButton:hover {
     background-color: #c73086;
 }
+
 
 /* Estilize a tabela */
 .mini-tabela {
@@ -180,7 +219,8 @@ img.produto-image {
     border-radius: 10%;
 }
 
- 
+
+
 /* Estilize as células da tabela */
 .mini-tabela th, .mini-tabela td {
     position: relative;
@@ -190,11 +230,13 @@ img.produto-image {
     border-radius: 10%;
 }
 
- 
   /* Estilize o botão */
 #mostrarEsconderBotao {
     position: fixed;
     top: 60px;
     right: 20px;
     z-index: 2; /* Garante que o botão fique acima da tabela */
+}
+.escondida {
+    display: none;
 }
