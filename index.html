@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <a id="top"></a>
+    <a id="topButton"></a>
     <h1>Selecione Produtos</h1>
     <br>
 
@@ -59,6 +59,11 @@
         
         <section class="secao1">
             <section id="ambiente">
+
+            <div class="ambiente-input">
+                <p class="opc-1">Ambiente: </p>
+                <input type="text" class="ambiente-input" id="ambiente1" placeholder="Ex: Sala">
+            </div>
                 
                 <p class="opc-1">Opções de Assistente Virtual:</p>
 
@@ -2945,27 +2950,26 @@
 
     <button id="mostrarEsconderBotao">Ocultar tabela</button>
     <table class="mini-tabela">
-      <tr>
-        <th>Descrição</th>
-        <th>Valor</th>
-      </tr>
-      <tr>
-        <td id="subtotalSecao1">Subtotal Seção 1:</td>
-        <td id="subtotal1">R$ 0.00</td>
-      </tr>
-      <tr>
-        <td id="subtotalSecao2">Subtotal Seção 2:</td>
-        <td id="subtotal2">R$ 0.00</td>
-      </tr>
-      <tr>
-        <td id="totalGeral">Total Geral:</td>
-        <td id="totalGerado">R$ 0.00</td>
-      </tr>
-    </table>
+        <tr>
+          <th>Descrição</th>
+          <th>Valor</th>
+        </tr>
+        <tr>
+          <td class="linha-subtotal" id="subtotalSecao1">Subtotal Seção 1:</td>
+          <td id="subtotal1">R$ 0.00</td>
+        </tr>
+        <tr>
+            <td class="linha-subtotal" id="subtotalSecao2">Subtotal Seção 2:</td>
+            <td id="subtotal2">R$ 0.00</td>
+        </tr>
+        <tr>
+          <td id="totalGeral">Total Geral:</td>
+          <td id="totalGerado">R$ 0.00</td>
+        </tr>
+      </table>
 
 
     <script src="./static/javas/script.js"></script>
-    <script src="./static/javas/excel.js"></script>
     
     <a href="#top" id="topButton">&#x25B2;</a>
 
