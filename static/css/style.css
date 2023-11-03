@@ -29,6 +29,8 @@ h3 {
 
 p {
     color: #555454;
+    margin-right: 10px; /* Espaçamento entre o texto e o input */
+
 }
 
 
@@ -171,10 +173,16 @@ img.produto-image {
     font-weight: bold;
 }
 
+.ambiente-input {
+    align-items: baseline;
+    border-radius: 5px;
+    text-align: left;
+    display: flex;
+    align-items: center; /* Alinhar verticalmente */
 
+}
 
 .observation-input {
-    display: block;
     border-radius: 5px;
     width: 300px; /* Largura desejada */
     height: 20px; /* Altura desejada */
